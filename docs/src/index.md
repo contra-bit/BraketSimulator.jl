@@ -34,7 +34,7 @@ Then you can run a simulation of a simple [GHZ state](https://en.wikipedia.org/w
 ```jldoctest
 julia> using BraketSimulator
 
-julia> using BraketSimulator: Circuit, H, CNot, Amplitude
+julia> using BraketSimulator: Circuit, H, CNot, Amplitude, Instruction, Program
 
 julia> n_qubits = 10;
 

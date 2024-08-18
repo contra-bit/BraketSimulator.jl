@@ -1917,6 +1917,15 @@ end
 
 # semgrep rules can't handle this macro properly yet
 # nosemgrep
+"""
+    BraketSimulator.Circuit(qasm_source::String, @nospecialize(inputs::Dict{String, <:Any}=Dict{String, Any}()), inputs::Dict{String, <:Any}=Dict{String, Any}())
+
+Build a `BraketSimulator.Circuit` from a qasm source
+
+# Arguments
+- `qasm_source::String`: OpenQASM 3 source
+- `inputs::Dict{String, <:Any}`: Input Dictionary
+"""
 function BraketSimulator.Circuit(qasm_source::String, @nospecialize(inputs::Dict{String, <:Any}=Dict{String, Any}()))
     input_qasm = if endswith(qasm_source, ".qasm") && isfile(qasm_source)
         read(qasm_source, String)

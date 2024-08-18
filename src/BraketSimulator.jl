@@ -11,7 +11,7 @@ using
     Random,
     PrecompileTools
 
-export StateVectorSimulator, DensityMatrixSimulator, evolve!, simulate, ValidationError
+export StateVectorSimulator, DensityMatrixSimulator, evolve!, simulate, ValidationError, add_instruction!
 
 const AbstractStateVector{T} = AbstractVector{T}
 const AbstractDensityMatrix{T} = AbstractMatrix{T}
